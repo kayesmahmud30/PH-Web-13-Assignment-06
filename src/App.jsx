@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
@@ -5,7 +6,12 @@ import GetStarted from "./components/GetStarted/GetStarted";
 import NavBar from "./components/NavBar/NavBar";
 import Pricing from "./components/Pricing/Pricing";
 import Rating from "./components/Rating/Rating";
+import ToolsDisplay from "./components/ToolsDisplay/ToolsDisplay";
 import Workflow from "./components/Workflow/Workflow";
+
+const productsDataPromise = fetch("/productsData.json").then((res) =>
+  res.json(),
+);
 
 function App() {
   return (
@@ -13,6 +19,9 @@ function App() {
       <NavBar />
       <Banner />
       <Rating />
+      <Suspense>
+        <ToolsDisplay productsDataPromise={productsDataPromise} />
+      </Suspense>
       <GetStarted />
       <Pricing />
       <Workflow />

@@ -1,0 +1,61 @@
+import { FaCheck } from "react-icons/fa";
+
+const Products = ({ product, addedToCart, setAddedToCart }) => {
+  const { name, description, price, period, tag, features, icon } = product;
+
+  const handleAddedToCart = (currentCart) => {
+    if (!addedToCart.includes(currentCart)) {
+      setAddedToCart([...addedToCart, currentCart]);
+    }
+  };
+
+  return (
+    <div className="max-w-sm rounded-2xl border-3 border-gray-300 bg-white p-6 shadow-sm relative mx-auto">
+      <span
+        className={`absolute right-4 top-4 text-xs font-semibold px-3 py-1 rounded-full 
+            ${tag === "New" ? "new" : tag === "Best Seller" ? "best-seller" : "popular"}
+        `}
+      >
+        {tag}
+      </span>
+
+      <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-4">
+        <img src={icon} alt={name} />
+      </div>
+
+      <h2 className="text-xl font-semibold mb-2">{name}</h2>
+
+      <p className="text-gray-500 text-sm mb-4">{description}</p>
+
+      <div className="mb-4">
+        <span className="text-3xl font-bold">${price}</span>
+        <span className="text-gray-500">/{period}</span>
+      </div>
+
+      <ul className="space-y-2 mb-6">
+        {features.map((feature, index) => {
+          return (
+            <li
+              key={index}
+              className="flex items-center gap-2 text-sm text-gray-600"
+            >
+              <FaCheck className="text-green-500" />
+              {feature}
+            </li>
+          );
+        })}
+      </ul>
+
+      <button
+        onClick={() => {
+          handleAddedToCart(product);
+        }}
+        className="w-full py-3 rounded-full text-white font-medium bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
+      >
+        Buy Now
+      </button>
+    </div>
+  );
+};
+
+export default Products;

@@ -10,3 +10,29 @@ body {
 .common-w {
   max-width: 80%;
 }
+
+@media screen and (max-width: 576px) {
+  .common-w {
+    max-width: 90%;
+  }
+}
+
+.new {
+  color: #0a883e;
+  background: #dbfce7;
+}
+
+.popular {
+  background: #e1e7ff;
+  color: #4f39f6;
+}
+
+.best-seller {
+  background: #fef3c6;
+  color: #bb4d00;
+}
+
+.activeBtn {
+  background: linear-gradient(to right, #4f39f6, #9514fa);
+  color: white;
+}

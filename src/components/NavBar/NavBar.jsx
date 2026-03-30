@@ -4,10 +4,11 @@ import { LuShoppingCart } from "react-icons/lu";
 const NavBar = () => {
   return (
     <nav className=" common-w flex justify-between items-center mx-auto p-7">
+      
       <h1 className="text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
         DigiTools
       </h1>
-      <ul className="flex gap-8">
+      <ul className="hidden md:flex gap-8">
         <li className="text-[20px] font-semibold">
           <a href="#">Products</a>
         </li>

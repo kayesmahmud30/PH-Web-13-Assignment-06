@@ -1,6 +1,6 @@
 const Pricing = () => {
   return (
-    <section>
+    <section className="common-w mx-auto">
       <div className="container mx-auto px-2 my-50">
         <header className="text-center space-y-3 mb-10">
           <h1 className="text-5xl font-extrabold">
