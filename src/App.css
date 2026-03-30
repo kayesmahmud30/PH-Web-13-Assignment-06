@@ -6,3 +6,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-style: normal;
 }
+
+.common-w {
+  max-width: 80%;
+}
