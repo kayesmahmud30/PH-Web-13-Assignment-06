@@ -3,9 +3,8 @@ import { LuShoppingCart } from "react-icons/lu";
 
 const NavBar = () => {
   return (
-    <nav className=" common-w flex justify-between items-center mx-auto p-7">
-      
-      <h1 className="text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
+    <nav className="common-w flex justify-around items-center mx-auto py-7">
+      <h1 className="text-xl md:text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
         DigiTools
       </h1>
       <ul className="hidden md:flex gap-8">
@@ -26,10 +25,14 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <div className="flex justify-center items-center gap-6">
-        <LuShoppingCart className="text-3xl" />
-        <button className="text-[20px] font-semibold">Login</button>
-        <button className="btn bg-linear-to-r to-[#9514FA] from-[#4F39F6] rounded-full p-6 text-white font-semibold">
+      <div className="flex justify-center items-center md:gap-6">
+        <button className="text-2xl md:text-3xl">
+          <LuShoppingCart />
+        </button>
+        <button className="text-[20px] mx-1 md:mx-auto font-semibold">
+          Login
+        </button>
+        <button className="md:btn bg-linear-to-r to-[#9514FA] from-[#4F39F6] rounded-full md:p-6 px-1.5 text-white font-semibold">
           Get Started
         </button>
       </div>

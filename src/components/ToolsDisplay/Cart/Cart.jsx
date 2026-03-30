@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Cart = ({ product, addedToCart, setAddedToCart }) => {
   const { name, price, icon } = product;
@@ -7,6 +8,8 @@ const Cart = ({ product, addedToCart, setAddedToCart }) => {
     setAddedToCart(
       addedToCart.filter((product) => currenProduct.name !== product.name),
     );
+
+    toast.error(`${currenProduct.name} is removed from Cart`);
   };
 
   return (

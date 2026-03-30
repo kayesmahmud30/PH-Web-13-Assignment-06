@@ -8,6 +8,7 @@ import Pricing from "./components/Pricing/Pricing";
 import Rating from "./components/Rating/Rating";
 import ToolsDisplay from "./components/ToolsDisplay/ToolsDisplay";
 import Workflow from "./components/Workflow/Workflow";
+import { ToastContainer } from "react-toastify";
 
 const productsDataPromise = fetch("/productsData.json").then((res) =>
   res.json(),
@@ -19,13 +20,20 @@ function App() {
       <NavBar />
       <Banner />
       <Rating />
-      <Suspense>
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center h-250">
+            <span className="w-25 loading loading-bars loading-xl"></span>
+          </div>
+        }
+      >
         <ToolsDisplay productsDataPromise={productsDataPromise} />
       </Suspense>
       <GetStarted />
       <Pricing />
       <Workflow />
       <Footer />
+      <ToastContainer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { FaCheck } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Products = ({ product, addedToCart, setAddedToCart }) => {
   const { name, description, price, period, tag, features, icon } = product;
@@ -6,6 +7,7 @@ const Products = ({ product, addedToCart, setAddedToCart }) => {
   const handleAddedToCart = (currentCart) => {
     if (!addedToCart.includes(currentCart)) {
       setAddedToCart([...addedToCart, currentCart]);
+      toast.success(`${currentCart.name} is added to Cart`)
     }
   };
 
