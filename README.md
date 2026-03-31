@@ -22,6 +22,7 @@ The project focuses on building reusable UI components, structured data renderin
 - JavaScript (ES6+)
 - Tailwind CSS
 - React Icons
+- React Toastify
 - Vite
 - Vercel (Deployment)
 
