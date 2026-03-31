@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import Products from "./Products/Products";
 import Cart from "./Cart/Cart";
 import { toast } from "react-toastify";
+import { FiShoppingCart } from "react-icons/fi";
 
 const ToolsDisplay = ({ productsDataPromise }) => {
   const productsData = use(productsDataPromise);
@@ -58,6 +59,20 @@ const ToolsDisplay = ({ productsDataPromise }) => {
         ) : (
           <div>
             <h2 className="text-2xl text-gray-800 mb-6 font-bold">Your Cart</h2>
+
+            {!addedToCart.length && (
+              <div className="flex flex-col items-center justify-center text-center py-16 bg-base-200 rounded-2xl">
+                <div className="text-7xl text-gray-500 mb-4">
+                  <FiShoppingCart />
+                </div>
+
+                <h2 className="text-3xl font-bold mb-2">Your Cart is Empty</h2>
+
+                <p className="text-gray-500 mb-6">
+                  Looks like you haven't added anything to your cart yet.
+                </p>
+              </div>
+            )}
 
             {addedToCart.map((product, index) => {
               return (
