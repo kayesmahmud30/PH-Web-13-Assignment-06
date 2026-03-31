@@ -11,18 +11,18 @@ const NavBar = () => {
 
   return (
     <nav className="common-w flex md:justify-around justify-between items-center mx-auto md:py-7 p-3 relative">
-      <div className="flex items-center">
+      <div className="flex items-center justify-between">
         <div
           onClick={() => {
             menuHandler(!menuStatus);
           }}
-          className="mr-4 text-2xl md:hidden"
+          className="mr-4 text-4xl md:hidden"
         >
           {menuStatus ? <IoMenu /> : <IoClose />}
         </div>
 
         <ul
-          className={`mini-text md:hidden inline bg-[#2020b259] border border-blue-500 p-5 rounded-md absolute ${menuStatus ? "-left-70" : "left-0"} top-17 duration-500 `}
+          className={`mini-text md:hidden inline bg-[#2020b259] border border-blue-500 py-8 px-10 rounded-md absolute ${menuStatus ? "-left-70" : "left-0"} top-17 duration-500 `}
         >
           <li className="text-[20px] font-semibold">
             <a href="#">Products</a>
@@ -47,7 +47,7 @@ const NavBar = () => {
           </li>
         </ul>
 
-        <h1 className="text-xl md:text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
+        <h1 className="text-2xl md:text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
           DigiTools
         </h1>
       </div>
