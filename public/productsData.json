@@ -12,7 +12,7 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "icon": "https://i.ibb.co.com/s9cBMBH7/3.png"
+    "icon": "https://i.ibb.co.com/sdDgzQhQ/writting-pro.png"
   },
   {
     "id": 2,
@@ -34,7 +34,7 @@
     "tag": "New",
     "tagType": "new",
     "features": ["10M+ assets", "Commercial use", "No attribution"],
-    "icon": "https://i.ibb.co.com/sdDgzQhQ/writting-pro.png"
+    "icon": "https://i.ibb.co.com/s9cBMBH7/3.png"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "tag": "Popular",
     "tagType": "popular",
     "features": ["50+ automations", "API access", "Custom workflows"],
-    "icon": "https://i.ibb.co.com/Z1tzhtNf/6.png"
+    "icon": "https://i.ibb.co.com/rRsrhqPZ/4.png"
   },
   {
     "id": 5,
@@ -67,6 +67,6 @@
     "tag": "Best Seller",
     "tagType": "best-seller",
     "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
-    "icon": "https://i.ibb.co.com/rRsrhqPZ/4.png"
+    "icon": "https://i.ibb.co.com/Z1tzhtNf/6.png"
   }
 ]

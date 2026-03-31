@@ -79,7 +79,11 @@ const ToolsDisplay = ({ productsDataPromise }) => {
 
             <button
               onClick={() => {
-                toast.warn("All cart product is proceed");
+                toast.warn(
+                  addedToCart.length
+                    ? "All cart product is proceed"
+                    : "There is no cart added",
+                );
                 setAddedToCart([]);
               }}
               className="btn bg-linear-to-r to-[#9514FA] from-[#4F39F6] rounded-full w-full font-bold text-white py-6 mt-10"
