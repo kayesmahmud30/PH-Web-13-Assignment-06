@@ -10,19 +10,19 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="md:common-w flex md:justify-around justify-between items-center mx-auto md:py-7 p-3 relative">
+    <nav className="lg:common-w flex lg:justify-around justify-between items-center mx-auto lg:py-7 p-3 relative">
       <div className="flex items-center justify-between">
         <div
           onClick={() => {
             menuHandler(!menuStatus);
           }}
-          className="mr-4 text-4xl md:hidden"
+          className="mr-4 text-4xl lg:hidden"
         >
           {menuStatus ? <IoMenu /> : <IoClose />}
         </div>
 
         <ul
-          className={`mini-text md:hidden inline bg-[#2020b259] border border-blue-500 py-8 px-10 rounded-md absolute ${menuStatus ? "-left-100" : "left-0"} top-17 duration-400 `}
+          className={`mini-text lg:hidden inline bg-[#2020b259] border border-blue-500 py-8 px-10 rounded-md absolute ${menuStatus ? "-left-100" : "left-7"} top-17 duration-400 `}
         >
           <li className="text-[20px] font-semibold">
             <a href="#">Products</a>
@@ -39,20 +39,20 @@ const NavBar = () => {
           <li className="text-[20px] font-semibold">
             <a href="#">FAQ</a>
           </li>
-          <li className="text-[20px] font-semibold">
+          <li className="md:hidden text-[20px] font-semibold">
             <a href="#">Login</a>
           </li>
-          <li className="text-[20px] font-semibold">
+          <li className="md:hidden text-[20px] font-semibold">
             <a href="#">Cart</a>
           </li>
         </ul>
 
-        <h1 className="text-2xl md:text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
+        <h1 className="text-2xl lg:text-3xl font-bold bg-linear-to-r to-[#9514FA] from-[#4F39F6] bg-clip-text text-transparent">
           DigiTools
         </h1>
       </div>
 
-      <ul className="hidden md:flex gap-8">
+      <ul className="hidden lg:flex justify-center gap-5">
         <li className="text-[20px] font-semibold">
           <a href="#">Products</a>
         </li>
@@ -70,11 +70,11 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <div className="flex justify-center items-center md:gap-6 gap-1">
-        <button className=" hidden md:inline text-2xl md:text-3xl">
+      <div className="flex justify-center items-center md:gap-4 lg:gap-6 gap-1">
+        <button className=" hidden md:inline text-2xl lg:text-3xl">
           <LuShoppingCart />
         </button>
-        <button className="md:inline hidden text-[20px] mx-1 md:mx-auto font-semibold">
+        <button className="md:inline hidden text-[20px] mx-1 lg:mx-auto font-semibold">
           Login
         </button>
         <button className="btn bg-linear-to-r to-[#9514FA] from-[#4F39F6] rounded-full text-white font-semibold ">

@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section className="md:common-w px-5 mx-auto flex md:flex-row flex-col justify-between items-center gap-15 my-10 md:text-left text-center ">
+    <section className="common-w px-5 mx-auto flex md:flex-row flex-col justify-between items-center gap-15 my-10 md:text-left text-center ">
       <div className="max-w-full md:max-w-[55%] space-y-5">
         <button className="flex justify-center items-center gap-1 bg-[#E1E7FF] text-[#4F39F6] rounded-full md:px-3 px-2 md:py-2 font-semibold md:mx-0 mx-auto">
           <MdWifiTetheringErrorRounded /> New: AI-Powered Tools Available
