@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="common-w flex md:justify-around justify-between items-center mx-auto md:py-7 p-3 relative">
+    <nav className="md:common-w flex md:justify-around justify-between items-center mx-auto md:py-7 p-3 relative">
       <div className="flex items-center justify-between">
         <div
           onClick={() => {
