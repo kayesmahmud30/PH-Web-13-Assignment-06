@@ -22,7 +22,7 @@ const NavBar = () => {
         </div>
 
         <ul
-          className={`mini-text md:hidden inline bg-[#2020b259] border border-blue-500 py-8 px-10 rounded-md absolute ${menuStatus ? "-left-70" : "left-0"} top-17 duration-500 `}
+          className={`mini-text md:hidden inline bg-[#2020b259] border border-blue-500 py-8 px-10 rounded-md absolute ${menuStatus ? "-left-100" : "left-0"} top-17 duration-400 `}
         >
           <li className="text-[20px] font-semibold">
             <a href="#">Products</a>
