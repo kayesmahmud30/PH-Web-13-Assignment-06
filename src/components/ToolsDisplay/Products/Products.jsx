@@ -52,9 +52,9 @@ const Products = ({ product, addedToCart, setAddedToCart }) => {
         onClick={() => {
           handleAddedToCart(product);
         }}
-        className="w-full py-3 rounded-full text-white font-medium bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
+        className={`w-full py-3 rounded-full text-white font-medium ${addedToCart.find(clickedProduct=> clickedProduct==product)? 'bg-green-600': 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'}`}
       >
-        Buy Now
+      {!addedToCart.find(clickedProduct=> clickedProduct==product) ? 'Buy Now':'✔ Added to Cart'}
       </button>
     </div>
   );
